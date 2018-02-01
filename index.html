@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<title>Bleachr</title>
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="alternate" media="only screen and (max-width: 640px)"
+    href="m-home.html">
+    
+    <script type="text/javascript">
+        if (window.innerWidth<700 || (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1))
+        {
+            window.location.href = "/m-home.html";
+        }
+    </script>
+    
+    <!-- Styles -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico"/>
+    
+	<style>
+    	@import url('assets/stadium.css');
+        @import url('assets/lcd.css');
+        @import url('assets/fonts/fonts.css');
+        @import url('assets/iphone.css');
+        @import url('assets/bleachr.css');
+	</style>
+</head>
+<body>
+    
+    
+
+<div class="videoContainer">
+  <video autoplay id="logovid">
+    <source src="/assets/images/bleachr_logovid_sm.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+    Video not supported.
+  </video>
+</div>
+    
+<div id="preload">
+   <img src="/assets/images/stadiumlight_sparkle.png" width="1" height="1" />
+</div>
+    
+<!-- Core JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(function(){ 
+            $("#logovid").bind('ended', function(){
+                if (window.innerWidth<800 || (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)) {
+                    location.href="/m-home.html";
+                 } else {
+                    location.href="/home.html";
+                }
+            });
+        });
+    </script>
+        
+</body>
+</html>

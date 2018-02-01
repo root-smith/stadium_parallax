@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<title>Bleachr</title>
+    
+    <!-- Styles -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script type="text/javascript">
+         if (screen.width<800) {
+             window.location="/m-home.html";
+         }
+ </script>
+    
+	<style>
+    	@import url('assets/stadium.css');
+        @import url('assets/lcd.css');
+        @import url('assets/fonts/fonts.css');
+        @import url('assets/iphone.css');
+	</style>
+</head>
+<body>
+<div class="overlay black flicker-load" id="loadscreen" style="position: fixed; height: 200%; width: 200%; background: black;"></div>
+
+<div id="scene" class="scene"
+     			data-friction-x="0.2"
+			data-friction-y="0.2"
+			data-scalar-x="25"
+			data-scalar-y="8">
+    
+    
+    <!— Depth 3 —>
+    <div class="layer" data-depth="0.04">
+        <div class="light stadium mid left flicker-1"></div>
+        <div class="light beam midleft phasebeam-4"></div>
+        <div class="light stadium mid right flicker-1"></div>
+        <div class="light beam midright phasebeam-4"></div>
+
+    </div>
+    <!— Depth 8 —>
+    <div class="layer" data-depth="0.05">
+            <div class="light stadium top left flicker-1 "></div>
+        <div class="light beam left phasebeam-4"></div>
+        <a href="/testimonials.html" class="interactable">
+            <div class="light stadium top right flicker-1"></div>
+        </a>
+        <div class="light beam right phasebeam-4"></div>
+    </div>
+    <!— Depth 20 —>
+    <div class="layer" data-depth="0.2">
+        <div class="scorebox" id="scorebox">
+            <div class="padding"></div>
+            <div class="scoretext home interactable">HOME</div>
+            <div class="scoretext away interactable">AWAY</div>
+            <div class="tv left on">
+                <div id="screen">
+                    <div id="content-holder">
+                        <div id="content">
+                            <div id="swapleft" class="tvtext">
+                                <ul>
+                                    <li class="flood-right interactable">
+                                    <a target="_parent" href="/about.html">ABOUT</a>
+                                    </li>
+                                    <li class="flood-right interactable">
+                                    <a target="_parent" href="/features.html">FEATURES</a>
+                                    </li>
+                                    <li class="flood-right interactable">
+                                    <a target="_parent" href="/partners.html">PARTNERS</a>
+                                    </li>
+                                    <li class="flood-right interactable">
+                                    <a target="_parent" href="/contact.html">CONTACT</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tv center on" id="main-screen">
+                <a target="_parent" href="/features.html">
+                <div id="screen">
+                    <div id="content-holder">
+                        <div id="content">
+                                <div id="default2" class="swaptext swapvid">
+                                    <img src='/assets/images/fan_engagement4.gif'>
+                                </div>
+                                <div id="swapmid" class="tvtext">
+                                <div id="default" class="swaptext midtitle">
+                                    <div class="text4">BLEACHR</div><br>
+                                    <div class="text2">MOBILE FAN ENGAGEMENT PLATFORMS</div>
+                                </div>
+                                <div id="t_analytics" class="swaptext hide">
+                                    <a href="/features/html#analytics" data-modal="analytics" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">DATA ANALYTICS</div>
+                                    </a>
+                                </div>
+                                    
+                                <div id="t_inseat" class="swaptext hide">
+                                    <a href="/features/html#inseat" data-modal="inseat" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">IN-SEAT ORDERING</div>
+                                    </a>
+                                </div>
+                                    
+                                <div id="t_beyond" class="swaptext hide">
+                                    <a href="/features/html#beyond" data-modal="beyond" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">BEYOND F&amp;B: In-Seat Merchandise Delivery</div>
+                                        
+                                    </a>
+                                </div>
+                                    
+                                <div id="t_loyalty" class="swaptext hide">
+                                    <a href="/features/html#loyalty" data-modal="loyalty" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">FAN LOYALTY &amp; REWARDS</div>
+                                        
+                                    </a>
+                                </div>
+                                    
+                                <div id="t_messaging" class="swaptext hide">
+                                    <a href="/features/html#messaging" data-modal="messaging" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">FANSTREAM &amp; MESSAGING</div>
+                                        
+                                    </a>
+                                </div>
+                                    
+                                <div id="t_videogames" class="swaptext hide">
+                                    <a href="/features/html#videogames" data-modal="videogames" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">VIDEO GAMES</div>
+                                        
+                                    </a>
+                                </div>
+                                    
+                                <div id="t_event" class="swaptext hide">
+                                    <a href="/features/html#event" data-modal="event" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">EVENT NAVIGATION</div>
+                                        
+                                    </a>
+                                </div>
+                                    
+                                <div id="t_ar" class="swaptext hide">
+                                    <a href="/features/html#ar" data-modal="ar" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">AR-LOCATION WAYFINDER</div>
+                                        
+                                    </a>
+                                </div>
+                                    
+                                <div id="t_vr" class="swaptext hide">
+                                    <a href="/features/html#vr" data-modal="vr" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">VR-MULTI-VIEW 360 DEGREE LIVE STREAM</div>
+                                        
+                                    </a>
+                                </div>
+                                    
+                                <div id="t_security" class="swaptext hide">
+                                    <a href="/features/html#security" data-modal="security" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">STADIUM SECURITY</div>
+                                        
+                                    </a>
+                                </div>
+                                    
+                                <div id="t_sponsor" class="swaptext hide">
+                                    <a href="/features/html#sponsor" data-modal="sponsor" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">SPONSOR INTEGRATION</div>
+                                        
+                                    </a>
+                                </div>
+                                    
+                                <div id="t_stats" class="swaptext hide">
+                                    <a href="/features/html#stats" data-modal="stats" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">REAL-TIME CONTENT SCORES &amp; STATS</div>
+                                        
+                                    </a>
+                                </div>
+                                    
+                                <div id="t_follow" class="swaptext hide">
+                                    <a href="/features/html#follow" data-modal="follow" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">FOLLOW-A-PLAYER</div>
+                                        
+                                    </a>
+                                </div> 
+                                
+                                <div id="t_notifications" class="swaptext hide">
+                                    <a href="/features/html#notifications" data-modal="notifications" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">NOTIFICATIONS</div>
+                                        
+                                    </a>
+                                </div>
+                                
+                                <div id="t_ticketing" class="swaptext hide">
+                                    <a href="/features/html#ticketing" data-modal="ticketing" class="modal-trigger">
+                                        <div class="text2">BLEACHR FEATURES:</div>
+                                        <div class="text3">TICKETING</div>
+                                        
+                                    </a>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            
+            <div class="tv right on">
+                <div id="screen">
+                    <div id="content-holder">
+                        <div id="content" class="tvtext righttxt">
+                            <ul>
+                            <li class="flood-right interactable">
+                                <a target="_parent" href="/testimonials.html">FAN &amp; PARTNER ACCOLADES</a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!— Depth 50 —>
+    <div class="layer" data-depth="0.45">
+        <div class="railing depth-50"></div>
+    </div>
+    <div class="layer" data-depth="0.50">
+        <div class="rowbox depth-50">
+            <div class="row"></div>
+            <div class="rowmask depth-50"></div>
+        </div>
+        <div class="concrete"></div>
+    </div>
+    <div class="layer" data-depth="0.60">
+        <div class="rowbox depth-60">
+            <div class="row"></div>
+            <div class="rowmask depth-60"></div>
+        </div>
+    </div>
+    <div class="layer" data-depth="0.70">
+        <div class="rowbox depth-70">
+            <div class="row"></div>
+            <div class="rowmask depth-70"></div>
+            <div class="itembox seat row-70 pos2 interactable pulse tooltip">
+                <a href="#" data-modal="stats" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-70 bot">Real-Time Content, Scores, &amp; Stats</span>
+            </div>
+            <div class="itembox seat row-70 pos3 interactable pulse tooltip">
+                <a href="#" data-modal="ar" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-70 bot">AR-Location Wayfinder</span>
+            </div>
+            <div class="itembox seat row-70 pos4 interactable pulse tooltip">
+                <a href="#" data-modal="vr" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-70 bot">VR-Multi-View 360 Degree Live Stream</span>
+            </div>
+            <div class="itembox seat row-70 pos5 interactable pulse tooltip">
+                <a href="#" data-modal="security" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-70 bot">Stadium Security</span>
+            </div>
+            <div class="itembox seat row-70 pos6 interactable pulse tooltip">
+                <a href="#" data-modal="follow" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-70 bot">Follow-A-Player</span>
+            </div>
+        </div>
+    </div>
+    <div class="layer" data-depth="0.80">
+        <div class="rowbox depth-80">
+            <div class="row"></div>
+            <div class="rowmask depth-80"></div>
+            <div class="itembox seat row-80 pos1 interactable pulse tooltip">
+                <a href="#" data-modal="analytics" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-80 bot">Data Analytics</span>
+            </div>
+            <div class="itembox seat row-80 pos2 interactable pulse tooltip">
+                <a href="#" data-modal="messaging" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-80 bot">Fan Social Chat &amp; Messaging</span>
+            </div>
+            <div class="itembox seat row-80 pos3 interactable pulse tooltip">
+                <a href="#" data-modal="videogames" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-80 bot">Video Games</span>
+            </div>
+            <div class="itembox seat row-80 pos4 interactable pulse tooltip">
+                <a href="#" data-modal="beyond" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-80 bot">Beyond F&amp;B: In-Seat Merchandise Delivery</span>
+            </div>
+            <div class="itembox seat row-80 pos5 interactable pulse tooltip">
+                <a href="#" data-modal="sponsor" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-70 bot">Sponsor Integration</span>
+            </div>
+            <div class="itembox seat row-80 pos6 interactable pulse tooltip">
+                <a href="#" data-modal="notifications" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-70 bot">Notifications</span>
+            </div>
+        </div>
+    </div>
+    <!— Depth 90 —>
+    <div class="layer" data-depth="0.90">
+        <div class="rowbox depth-90">
+            <div class="row"></div>
+            <div class="rowmask depth-90"></div>
+            <div class="itembox seat row-90 pos1 interactable pulse tooltip">
+                <a href="#" data-modal="event" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-90 bot">Event Navigation</span>
+            </div>
+            
+            <div class="itembox seat row-90 pos2 interactable pulse tooltip">
+                <a href="#" data-modal="ticketing" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-90 bot">Ticketing</span>
+            </div>
+            
+            <div class="itembox seat row-90 pos3 interactable pulse tooltip">
+                <a href="#" data-modal="inseat" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-90 bot">In-Seat Ordering</span>
+            </div>
+            <div class="itembox seat row-90 pos4 interactable pulse tooltip">
+                <a href="#" data-modal="video_engage" class="video-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-90 bot">Video: Engage &amp; Deliver</span>
+            </div>
+            <div class="itembox seat row-90 pos5 interactable pulse tooltip">
+                <a href="#" data-modal="loyalty" class="modal-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-90 bot">Fan Loyalty &amp; Rewards</span>
+            </div>
+            <div class="itembox seat row-90 pos6 interactable pulse tooltip">
+                <a href="#" data-modal="video_college" class="video-trigger">
+                    <div class="item seat glow2">
+                        <div class="item glowrepeat"></div>
+                    </div>
+                </a>
+                <span class="tooltiptext depth-80 bot">Video: BLEACHR College Sports App</span>
+                
+            </div>
+            <div class="bleacherbob"></div>
+            <div class="bob-bubble">
+                <div class="bob-text">
+                    <p>Hey fans, Bleachr Bob here!</p>
+                    <p>Click on the glowing seats to check out our exciting app features!</p>
+                </div>
+            </div>
+            <div class="item basketball"></div>
+        </div>
+    </div>
+    <!— Depth 100 —>
+    <div class="layer" data-depth="1.00">
+        <div class="railing depth-100">
+            <div class="flag pos1 english">
+            </div>
+            <div class="flag pos2 espanol">
+            </div>
+            <div class="flag pos3 deutsch">
+            </div>
+            <div class="flag pos4 francais">
+            </div>
+        </div>
+        <div class="adbox box concrete">
+            <ul>
+                <li class="adwrapper pos1 blue">
+                    <div class="ad">Golf</div>
+                </li>
+                <li class="adwrapper pos2 lblue">
+                    <div class="ad">E-Sports</div>
+                </li>
+                <li class="adwrapper pos3 blue">
+                    <div class="ad">Soccer</div>
+                </li>
+                <li class="adwrapper pos4 lblue">
+                    <div class="ad">Tennis</div>
+                </li>
+                <li class="adwrapper pos5 blue">
+                    <div class="ad">Baseball</div>
+                </li>
+                <li class="adwrapper pos6 lblue">
+                    <div class="ad">Football</div>
+                </li>
+                <li class="adwrapper pos7 blue">
+                    <div class="ad">Cricket</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div><!-- End Scene -->
+    
+<!-- Modals -->
+
+<div class="phone-container" id="phone-container">
+  <div class="phone" id="phone">
+    <div class="front">
+        <div id="frontscreen"></div>
+    </div>
+    <div class="back"> </div>
+    <div class="left"> </div>
+    <div class="left-top"> </div>
+    <div class="left-bottom"> </div>
+    <div class="right"> </div>
+    <div class="right-top"> </div>
+    <div class="right-bottom"> </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+</div>
+    
+<div class="modal large" id="video_engage">
+    <div class="modal-sandbox"></div>
+    <div class="modal-body">
+        <iframe src="https://player.vimeo.com/video/208960288?color=000000" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+</div>
+
+<div class="modal large" id="video_college">
+    <div class="modal-sandbox"></div>
+    <div class="modal-body d-flex justify-self-center">
+        <iframe src="https://player.vimeo.com/video/221145305" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+</div>
+    
+<div id="preload">
+   <img src="/assets/images/stadiumlight_sparkle.png" width="1" height="1" />
+</div>
+    
+<!-- Core JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <script>
+	var scene = document.getElementById('scene');
+	var parallaxInstance = new Parallax(scene);
+        
+        $( document ).ready(function() {
+            $('#phone-container').hide();
+            $('#default2').hide();
+            setTimeout(function(){
+                $('#loadscreen').hide();
+            }, 4000);
+            
+        });
+
+        $(".modal-trigger").click(function(e){
+                e.preventDefault();  
+                //parallaxInstance.disable();
+
+                $('#phone-container').show();
+                $('#phone-container').addClass('rise');
+                $('#phone').addClass('rotate-once');
+                $('#modal-overlay').css({'display':'block'});
+                
+                dataModal = $(this).attr("data-modal");
+                $("#" + dataModal).css({"display":"block"});
+                $("#swapmid").children().hide();
+                $("#t_" + dataModal).css({"display":"block"});    
+            
+                $('#phone').addClass('rotate-once');
+                $('#frontscreen').removeClass();
+                $('#frontscreen').addClass(dataModal);
+            
+                $('#default2').hide();
+                $('#default2').children().hide();
+            });
+
+            $("#modal-overlay").click(function(){
+
+                $('#modal-overlay').css({'display':'none'});
+                $('#phone-container').hide();
+                $('#phone-container').removeClass('rise');
+                $('#phone').removeClass('rotate-once');
+                $("#" + dataModal).css({"display":"none"});
+                
+                $('#swapmid').children().hide();
+                
+                    $('#default2').show();
+                    $('#default2').children().show();
+                //parallaxInstance.enable();
+            });
+        
+            $(".video-trigger").click(function(e){
+                    e.preventDefault();
+                    //parallaxInstance.disable();
+                    $('#modal-overlay').css({'display':'block'});
+                
+                    dataModal = $(this).attr("data-modal");
+                    $("#" + dataModal).css({"display":"block"});
+                    $("#swapmid").children().hide();
+                    $("#t_" + dataModal).css({"display":"block"});
+            });
+        
+            $(".close-modal, .modal-sandbox").click(function(){
+                $(".modal").css({"display":"none"});
+                parallaxInstance.enable();
+            });
+</script>
+</body>
+</html>

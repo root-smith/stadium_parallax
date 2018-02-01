@@ -1,0 +1,426 @@
+/* @import compass/reset */
+/* HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ========================================================== */
+/* =============================================================================
+ * HTML5 display definitions
+ * ========================================================================== */
+
+/* Colours */
+/* Shadow defaults */
+.phone-container {
+    margin: 100px auto;
+    width: 251px;
+    height: 537px;
+    -moz-perspective: 1000px;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    -moz-perspective: 800px;
+    -webkit-perspective: 800px;
+    perspective: 800px;
+    transform: translate(0);
+    position: absolute;
+    z-index: 5000;
+    display: none;
+} .phone-container:after {position: relative;}
+
+.phone-container * {
+    position: absolute;
+    -moz-transition: all 1500ms;
+    -o-transition: all 1500ms;
+    -webkit-transition: all 1500ms;
+    transition: all 1500ms;
+}
+
+.phone.front.screen {
+    
+}
+.bounce {
+    -webkit-animation: elevate-phone 2s ease-in-out infinite alternate;
+    -moz-animation: elevate-phone 2s ease-in-out infinite alternate;
+    -o-animation: elevate-phone 2s ease-in-out infinite alternate;
+    -ms-animation: elevate-phone 2s ease-in-out infinite alternate;
+    animation: elevate-phone 2s ease-in-out infinite alternate;
+}
+
+.rise {
+    -webkit-animation: rise 1s ease-in-out, elevate-phone 3s ease-in-out infinite alternate;
+    -moz-animation: rise 1s ease-in-out, elevate-phone 3s ease-in-out infinite alternate;
+    -o-animation: rise 1s ease-in-out, elevate-phone 3s ease-in-out infinite alternate;
+    -ms-animation: rise 1s ease-in-out, elevate-phone 3s ease-in-out infinite alternate;
+    animation: elevate-phone 3s ease-in-out infinite alternate, rise 1s ease-out;
+}
+
+.rotate-once {
+    left: 125px;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-animation: rotate-once 1s ease-in-out;
+    -moz-animation: rotate-once 1s ease-in-out;
+    -o-animation: rotate-once 1s ease-in-out;
+    -ms-animation: rotate-once 1s ease-in-out;
+    animation: rotate-once 1s ease-in-out;
+}
+
+.rotate {
+    left: 125px;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -moz-transform: rotateY(-80deg);
+    -ms-transform: rotateY(-80deg);
+    -webkit-transform: rotateY(-80deg);
+    transform: rotateY(-80deg);
+    -webkit-animation: rotate-phone 5s linear infinite;
+    -moz-animation: rotate-phone 5s linear infinite;
+    -o-animation: rotate-phone 5s linear infinite;
+    -ms-animation: rotate-phone 5s linear infinite;
+    animation: rotate-phone 5s linear infinite;
+}
+
+.phone-container .front {
+  width: 251px;
+  height: 537px;
+  background: url(/assets/images/front2.png) no-repeat;
+  -moz-transform: translateX(-125px) rotateY(0deg) translateZ(14px);
+  -ms-transform: translateX(-125px) rotateY(0deg) translateZ(14px);
+  -webkit-transform: translateX(-125px) rotateY(0deg) translateZ(14px);
+  transform: translateX(-125px) rotateY(0deg) translateZ(14px);
+} .phone-container .front:after {position: relative;}
+
+
+
+.phone-container .back {
+    width: 251px;
+    height: 537px;
+    background: url(/assets/images/back.png) no-repeat;
+  -moz-transform: translateX(-125px) rotateY(180deg) translateZ(13px);
+  -ms-transform: translateX(-125px) rotateY(180deg) translateZ(13px);
+  -webkit-transform: translateX(-125px) rotateY(180deg) translateZ(13px);
+  transform: translateX(-125px) rotateY(180deg) translateZ(13px);
+}
+.phone-container .left {
+  width: 31px;
+  height: 537px;
+  background: url(/assets/images/left_side.png) no-repeat;
+  -moz-transform: translateX(-138px) rotateY(-90deg);
+  -ms-transform: translateX(-138px) rotateY(-90deg);
+  -webkit-transform: translateX(-138px) rotateY(-90deg);
+  transform: translateX(-138px) rotateY(-90deg);
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.phone-container .left-top {
+  background: black;
+  width: 29px;
+  height: 30px;
+  top: 4px;
+  -moz-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
+  -ms-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
+  -webkit-transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
+  transform: translateX(-129px) rotateY(-90deg) rotateX(30deg);
+}
+.phone-container .left-bottom {
+  background: black;
+  width: 29px;
+  height: 25px;
+  -moz-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
+  -ms-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
+  -webkit-transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
+  transform: translateX(-131px) translateY(490px) rotateY(-90deg) rotateX(-30deg);
+}
+.phone-container .right {
+  width: 31px;
+  height: 537px;
+  background: url(/assets/images/right_side.png) no-repeat;
+  -moz-transform: translateX(105px) rotateY(90deg);
+  -ms-transform: translateX(105px) rotateY(90deg);
+  -webkit-transform: translateX(105px) rotateY(90deg);
+  transform: translateX(105px) rotateY(90deg);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.phone-container .right-top {
+  background: black;
+  width: 29px;
+  height: 29px;
+  top: 4px;
+  -moz-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
+  -ms-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
+  -webkit-transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
+  transform: translateX(98px) rotateY(-90deg) rotateX(-30deg);
+}
+.phone-container .right-bottom {
+  background: black;
+  width: 29px;
+  height: 25px;
+  -moz-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
+  -ms-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
+  -webkit-transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
+  transform: translateX(100px) translateY(490px) rotateY(-90deg) rotateX(30deg);
+}
+.phone-container .shadow {
+  width: 250px;
+  height: 20px;
+  -moz-transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
+  -ms-transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
+  -webkit-transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
+  transform: translateX(-125px) translateY(530px) rotateX(90deg) translateY(-60px);
+  -moz-box-shadow: 0 60px 60px #000;
+  -webkit-box-shadow: 0 60px 60px #000;
+  box-shadow: 0 60px 60px #000;
+  -webkit-animation: lower-shadow 3s ease-in-out infinite alternate;
+  -moz-animation: lower-shadow 3s ease-in-out infinite alternate;
+  -o-animation: lower-shadow 3s ease-in-out infinite alternate;
+  -ms-animation: lower-shadow 3s ease-in-out infinite alternate;
+  animation: lower-shadow 3s ease-in-out infinite alternate;
+}
+
+@-moz-keyframes rotate-phone {
+  0% {
+    -moz-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@-webkit-keyframes rotate-phone {
+  0% {
+    -moz-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@-o-keyframes rotate-phone {
+  0% {
+    -moz-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@-ms-keyframes rotate-phone {
+  0% {
+    -moz-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotate-phone {
+  0% {
+    -moz-transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -moz-transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@-moz-keyframes elevate-phone {
+  0% {
+    bottom: 30px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@-webkit-keyframes elevate-phone {
+  0% {
+    bottom: 30px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@-o-keyframes elevate-phone {
+  0% {
+    bottom: 30px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@-ms-keyframes elevate-phone {
+  0% {
+    bottom: 30px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@keyframes elevate-phone {
+  0% {
+    bottom: 30px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@-moz-keyframes lower-shadow {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 40px;
+  }
+}
+@-webkit-keyframes lower-shadow {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 40px;
+  }
+}
+@-o-keyframes lower-shadow {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 40px;
+  }
+}
+@-ms-keyframes lower-shadow {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 40px;
+  }
+}
+@keyframes lower-shadow {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 40px;
+  }
+}
+
+@keyframes rise {
+    0% {
+        bottom: -1000px;
+    }
+    100% {
+        bottom: 20px;
+  }
+}
+
+@keyframes rotate-once {
+  0% {
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  100% {
+    -moz-transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+#frontscreen {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 218px;
+    height: 376px;
+    top: 76px;
+    left: 15px;
+}
+
+#frontscreen.ticketing {
+    background-image: url('/assets/images/ticketing.jpg');
+}
+
+#frontscreen.inseat {
+    background-image: url('/assets/images/inseat.jpg');
+}
+
+#frontscreen.beyond {
+    background-image: url('/assets/images/beyond.jpg');
+}
+
+#frontscreen.loyalty {
+    background-image: url('/assets/images/loyalty.jpg');
+}
+
+#frontscreen.messaging {
+    background-image: url('/assets/images/messaging.jpg');
+}
+
+#frontscreen.videogames {
+    background-image: url('/assets/images/videogames.jpg');
+}
+
+#frontscreen.event {
+    background-image: url('/assets/images/event.jpg');
+}
+
+#frontscreen.ar {
+    background-image: url('/assets/images/ar.jpg');
+}
+
+#frontscreen.vr {
+    background-image: url('/assets/images/vr.jpg');
+}
+
+#frontscreen.security {
+    background-image: url('/assets/images/security.jpg');
+}
+
+#frontscreen.analytics {
+    background-image: url('/assets/images/analytics.jpg');
+}
+
+#frontscreen.sponsor {
+    background-image: url('/assets/images/sponsor.jpg');
+}
+
+#frontscreen.stats {
+    background-image: url('/assets/images/stats.jpg');
+}
+
+#frontscreen.follow {
+    background-image: url('/assets/images/follow.jpg');
+}
+
+#frontscreen.notifications {
+    background-image: url('/assets/images/notifications.jpg');
+}
